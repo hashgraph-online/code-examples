@@ -1,4 +1,4 @@
-# HCS-2 Topic Management Tool
+# HCS Example Commands
 
 This project provides a set of tools for using Hashgraph Online standards. It includes functionality for creating indexed and non-indexed topics, submitting messages to topics, and performing various operations such as registering, deleting, updating, and migrating topics.
 
