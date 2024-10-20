@@ -1,0 +1,33 @@
+{
+  "name": "hcs-code-examples",
+  "version": "1.0.0",
+  "description": "Code examples for interacting with Hashgraph Online",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-non-indexed-topic": "node examples/create-non-indexed-topic-id.js",
+    "create-indexed-topic": "node examples/create-indexed-topic-id.js",
+    "submit-message": "node examples/submit-message-to-hcs2-topic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashgraph-online/code-examples.git"
+  },
+  "keywords": [
+    "Hedera",
+    "HCS"
+  ],
+  "author": "kantorcodes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hashgraph-online/code-examples/issues"
+  },
+  "homepage": "https://github.com/hashgraph-online/code-examples#readme",
+  "dependencies": {
+    "@hashgraph/sdk": "^2.52.0",
+    "@inquirer/prompts": "^7.0.0",
+    "dotenv": "^16.4.5",
+    "inquirer": "^12.0.0"
+  }
+}
