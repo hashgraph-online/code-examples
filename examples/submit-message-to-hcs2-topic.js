@@ -136,17 +136,24 @@ async function promptUser() {
   // Operation-Specific Prompts
   switch (operation) {
     case 'register': {
-      const t_id = await input({
-        message: 'Enter the Topic ID to register (e.g., 0.0.123456):',
-        validate: (value) =>
-          /^0\.\d+\.\d+$/.test(value) || 'Please enter a valid Topic ID.',
+      const useTopicId = await confirm({
+        message: 'Do you want to register a specific Topic ID?',
+        default: false,
       });
+
+      if (useTopicId) {
+        const t_id = await input({
+          message: 'Enter the Topic ID to register (e.g., 0.0.123456):',
+          validate: (value) =>
+            /^0\.\d+\.\d+$/.test(value) || 'Please enter a valid Topic ID.',
+        });
+        message.t_id = t_id;
+      }
 
       const metadata = await promptForMetadata();
       if (Object.keys(metadata).length > 0) {
         message.metadata = metadata;
       }
-      message.t_id = t_id;
       break;
     }
 
